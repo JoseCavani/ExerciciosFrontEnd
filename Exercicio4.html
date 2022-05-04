@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            .myDiv {
+              border: 5px outset red;
+              background-color: lightblue;
+              text-align: center;
+            }
+            </style>
+        <meta charset="utf-8">
+        <title>
+            Agenda
+        </title>
+    </head>
+    <header><h1>Agenda</h1></header>
+    <nav>   
+        <label">descricao</label>
+        <input type text="text" id="txtloop"/>
+    </nav>
+   
+    <body>
+        <div>
+            <label for="status">status: </label>
+            <select name="status">
+            <option value="fazendo"> fazendo</option>
+            <option value="feito"> feito</option>
+        </select>
+        <br>
+        <label for="data">data</label>
+        <input type="date">
+        </div>
+        <div class = "tabela">
+        <table> 
+            <thead>
+                <th>
+                    To do
+                </th>
+                <th>
+                    doing
+                </th>
+                <th>
+                    done
+                </th>
+            </thead>
+            <tbody>
+                <td id ="todo"></td>
+                <td>ssss</td>
+                <td>zzzz</td>
+            </tbody>
+        </table>
+        <button id = "botao" onclick="Funcao(txtloop.value)">salvar;</button>
+     <script>
+            var Funcao = function () {
+         var li = document.createElement("li");
+         document.getElementById('todo').appendChild(li).textContent = txtloop.value;
+            }
+     </script>
+    </body></html>

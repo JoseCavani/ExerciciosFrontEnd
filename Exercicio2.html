@@ -1,0 +1,39 @@
+<html>
+<body>
+
+ <input type text="text" id="txtloop" />
+ <input type text="text2" id="txtloop2" />
+        <input type="button" id="btnEnter" value="Enter" onclick="fibonacci_series(txtloop.value,txtloop2.value)" />
+
+        <p id="output"></p>
+
+<script>
+var fibonacci_series = function (numero,numero2) 
+{
+let a = 0;
+let b = 1;
+
+
+let c = 0;
+
+let element = document.getElementById('output');
+
+while (true){
+    if (c>numero2) 
+        break;
+     a = b;
+    b = c;
+
+    if(c>=numero){
+    let div = document.createElement('div');
+    div.innerHTML = c;
+    document.body.appendChild(div);
+    }
+    c = a+b;
+}
+};
+
+</script>
+
+</body>
+</html>
