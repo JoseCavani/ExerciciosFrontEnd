@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Oswald:700);
+
+.scrum-card {
+	position: relative; 
+	font-family: 'Oswald', sans-serif;
+	font-size: 10em;
+	border: 1px #000 solid;
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 0;
+	width: 200px;
+	height: 300px;
+	line-height: 300px;
+	white-space: nowrap;
+	text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+		</div>
+		<div data-role="content" data-theme="a">
+			<div class="scrum-card">
+				<span id = "numero">0</span>
+			</div>
+			<label for="select-choice-a" class="select">valor:</label>
+			<select id="box1" onChange="Funcao(this);">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="5">5</option>
+				<option value="8">8</option>
+				<option value="13">13</option>
+				<option value="20">20</option>
+				<option value="40">40</option>
+				<option value="99">99</option>
+			</select>			
+		</div>
+	</div>
+<script>
+      var Funcao = function(sel) {
+         document.getElementById('numero').innerHTML =  sel.options[sel.selectedIndex].text;
+            }
+</script>
+</body>
+</html>
