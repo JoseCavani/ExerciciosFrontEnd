@@ -8,8 +8,10 @@
 </head>
 <body>
     <p id ="thing"></p>
-    <button onclick="Funcao()"></button>
     <script>
+        window.onload = function(){
+            Funcao();
+        }
         var Funcao = function () {
             const array = [];
             for (let index = 0; index < 50; index++) {
